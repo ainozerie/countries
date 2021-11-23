@@ -30,8 +30,8 @@ class App extends Component {
   render () {
     if (this.state.isLoading) {
       return (
-        <div>
-          <p>The data is loading</p>
+        <div className='loader'>
+          <div class="lds-dual-ring"></div>
         </div>
       )
     } else {
@@ -47,7 +47,9 @@ class App extends Component {
             })
           .map((c) => (
             <div className='country' key={c.name}>
+              <div className='title'>
               <h2>{c.name}</h2><h3>{c.capital}</h3>
+              </div>
               <img src={c.flags.png} alt={c.name} />
               <div className='cardContent'>
                 <p>
