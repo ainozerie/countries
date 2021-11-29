@@ -3,7 +3,10 @@
     padding: 0;
 }
 body {
-    background-color: #9eadc8;
+    background-color: whitesmoke;
+}
+a {
+    text-decoration: none;
 }
 .countries {
     width: 100vw;
@@ -20,11 +23,18 @@ body {
     flex-grow: 1;
     margin: 10px;
     position: relative;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+.country:hover {
+    scale: 1.03;
+    box-shadow: 6px 6px 1px 0px #8d8d8d;
 }
 .title {
     background-color: #392061;
     padding-top: 10px;
     min-height: 50px;
+    padding-bottom: 5px;
 
 }
 h2, h3 {
@@ -57,6 +67,8 @@ input {
     font-size: 20px;
     background-color: whitesmoke;
     color: #1A1B25;
+    background-color: #F0F2A6;
+    border: 2px solid #392061;
 }
 /* loader animation */
 .loader {
