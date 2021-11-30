@@ -42,7 +42,7 @@ class CountriesList extends Component {
             ));
             return (
                 <>
-                <input type='text' name='searchInput' onChange={this.searchHandler.bind(this)}/>
+                <input type='text' name='searchInput' onChange={this.searchHandler.bind(this)} placeholder='Search...'/>
                 <div className='countries'>
                     {countriesListing}
                 </div>

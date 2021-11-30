@@ -3,10 +3,42 @@
     padding: 0;
 }
 body {
-    background-color: whitesmoke;
+    background-color: #CAF0F8;
+    font-family: monospace;
+    position: relative;
 }
 a {
     text-decoration: none;
+    color: unset;
+
+}
+header {
+    background-color: #0D1321;
+    width: 100vw;
+    height: 10vh;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header logo {
+    margin-left: 20px;
+    font-size: 12px;
+}
+header a {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li {
+    display: inline-block;
+    margin-right: 20px;
 }
 .countries {
     width: 100vw;
@@ -17,58 +49,84 @@ a {
 }
 .country {
     width: 20vw;
-    min-height: 15vw;
-    background-color: #F0F2A6;
+    min-height: 14vw;
+    background-color: #90E0EF;
     border: 2px solid black;
     flex-grow: 1;
     margin: 10px;
     position: relative;
     transition: ease-in-out;
     transition-duration: 0.3s;
+    color: #0D1321;
 }
 .country:hover {
     scale: 1.03;
-    box-shadow: 6px 6px 1px 0px #8d8d8d;
+    box-shadow: 6px 6px 1px 0px #0D1321;
+
 }
 .title {
-    background-color: #392061;
+    background-color: #0D1321;
     padding-top: 10px;
     min-height: 50px;
     padding-bottom: 5px;
-
+    height: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 h2, h3 {
-    text-align: center;
+    text-align: left;
     color: whitesmoke;
+    margin-left: 10px;
 }
 .cardContent {
     margin-top: 10px;
     padding-left: 10px;
-    color: #1a1b25;
+    height: 8vw;
+
 }
 .country img {
-    width: 40px;
-    height: 40px;
+    width: 85px;
+    height: 85px;
     border: 1px solid black;
-    border-radius: 50%;
+    border-bottom-left-radius: 50%;
     position: absolute;
-    right: -15px;
-    top: -15px;
+    right: 5px;
+    top: 5px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: ease-in-out;
+    transition-duration: 0.3s;
 }
+.country:hover img {
+    filter: none;
+    -webkit-filter: none;
+} 
 span {
     font-weight: bold;
 }
 input {
-    width: 90vw;
+    width: 10vw;
     height: 30px;
-    margin: 10px 5vw;
-    margin-top: 20px;
-    text-align: center;
     font-size: 20px;
+    background-color: #0D1321;
+    color: #0D1321;
+    position: absolute;
+    top: 25px;
+    left: 45vw;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    font-size: 22px;
+    font-family: monospace;
+    font-weight: bold;
+}
+input:focus {
+    width: 30vw;
+    left: 35vw;
     background-color: whitesmoke;
-    color: #1A1B25;
-    background-color: #F0F2A6;
-    border: 2px solid #392061;
+    font-size: 18px;
+
 }
 /* loader animation */
 .loader {

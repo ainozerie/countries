@@ -5,6 +5,7 @@ import CountriesList from './CountriesList';
 import {BrowserRouter, Link, Routes, Route, useParams} from 'react-router-dom';
 import Home from './Home';
 import CountrySingle from './CountrySingle';
+import Header from './Header';
 
 const RouteWrapper = (props) => {
   const params = useParams();
@@ -16,18 +17,7 @@ class App extends Component {
   render () {
     return (
       <BrowserRouter>
-
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/countries'>Countries</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <Header />
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/countries' element={<CountriesList/>} />
