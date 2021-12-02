@@ -3,6 +3,8 @@ import { Component } from "react";
 import axios from 'axios';
 import CountryCard from "./CountryCard";
 import Loader from './Loader';
+import Input from "./Input";
+
 
 class CountriesList extends Component {
     state = {
@@ -10,16 +12,16 @@ class CountriesList extends Component {
         searchInput: '',
         isLoading: true,
     }
-    
+
     componentDidMount() {
         axios
-            .get('https://restcountries.com/v2/all?fields=name,capital,flags,languages,currencies,population')
+            .get('https://restcountries.com/v2/all?fields=name,capital,flags,languages,currencies,population,region')
             .then((res) => {
                 this.setState({data: res.data, isLoading: false});
                 console.log(this.state.data);
             });
         }
-    
+
     searchHandler(event) {
         this.setState({
             searchInput: event.target.value
@@ -38,11 +40,11 @@ class CountriesList extends Component {
                 })
             // saving in const all countries to show
             const countriesListing = countriesFilter.map((c) => (
-                <CountryCard {...c} key={c.name} />
+                <CountryCard {...c} />
             ));
             return (
                 <>
-                <input type='text' name='searchInput' onChange={this.searchHandler.bind(this)} placeholder='Search...'/>
+                <Input onChange={this.searchHandler.bind(this)}/>
                 <div className='countries'>
                     {countriesListing}
                 </div>

@@ -2,7 +2,7 @@ import { Component } from 'react';
 import React from 'react';
 import './App.css';
 import CountriesList from './CountriesList';
-import {BrowserRouter, Link, Routes, Route, useParams} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, useParams} from 'react-router-dom';
 import Home from './Home';
 import CountrySingle from './CountrySingle';
 import Header from './Header';
@@ -10,7 +10,7 @@ import Header from './Header';
 const RouteWrapper = (props) => {
   const params = useParams();
   return <CountrySingle params={params}{...props}/>
-} 
+}
 
 class App extends Component {
 

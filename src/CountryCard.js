@@ -1,26 +1,25 @@
 import React from "react";
 import number from 'easy-number-formatter';
-import { Component } from "react";
 import { Link } from "react-router-dom";
 
 const CountryCard = ({
-    key,
     capital,
     name,
     languages,
     currencies,
     population,
-    flags
+    flags,
+    region
 }) => {
     return (
-        <div className='country' key={key}>
+        <div className='country' key={name}>
         <Link to={capital}>
             <div className='title'>
                 <h2>{name}</h2><h3>{capital}</h3>
             </div>
             <img src={flags.png} alt={name} />
             <div className='cardContent'>
-                <p>
+                {/* <p>
                 Language(s): {languages.map((lang, i) => (
                     <span key={i}>{lang.name} </span>
                 ))}
@@ -29,7 +28,8 @@ const CountryCard = ({
                 Currencies: {currencies.map((mon, i) => (
                 <span key={i}>{mon.name} - {mon.symbol}</span>
                 ))}
-                </p>
+                </p> */}
+                <p>Continental affiliation: <span>{region}</span></p>
                 <p>Population: <span> {number.formatNumber(population)} </span></p>
             </div>
         </Link>
