@@ -10,7 +10,7 @@ Take a closer look at the chosen country: currency used, languages and current w
 
 Created using React.
 
-<img width="1440" alt="Countries 1" src="https://user-images.githubusercontent.com/81861720/145793801-b7a7592c-08ae-4536-904e-51ccdd1f67a5.png">
+<img width="1440" alt="Countries 1" src="https://user-images.githubusercontent.com/81861720/145794036-b4f49927-805e-425a-9591-eb6eff649dd4.png">
 
 <img width="1440" alt="Countries 2" src="https://user-images.githubusercontent.com/81861720/145793815-8cd27ef5-570f-4306-b3d7-866389b58a2d.png">
 
