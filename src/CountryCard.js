@@ -13,7 +13,7 @@ const CountryCard = ({
 }) => {
     return (
         <div className='country' key={name}>
-        <Link to={capital}>
+        <Link to={{pathname: `${capital}`}}>
             <div className='title'>
                 <h2>{name}</h2><h3>{capital}</h3>
             </div>
