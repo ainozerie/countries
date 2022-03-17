@@ -10,7 +10,7 @@ function getCountry(capital) {
 }
 
 function getWeather(capital) {
-    return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`);
+    return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=7fe2a6bfaa4deaa659ff9859a17f4083`);
 }
 
 class CountrySingle extends Component {
